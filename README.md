@@ -1,6 +1,6 @@
 # NestJS Docker Application
 
-This is a NestJS application running in Docker with MySQL database.
+This is a NestJS application running in Docker with MySQL database and phpMyAdmin for database management.
 
 ## Prerequisites
 
@@ -30,7 +30,27 @@ npm install
 docker-compose up --build
 ```
 
-The application will be available at `http://localhost:3000`.
+The application will be available at:
+- API: `http://localhost:3000` or `http://127.0.0.1:3000`
+- phpMyAdmin: `http://localhost:8080` or `http://127.0.0.1:8080`
+
+## Database Management
+
+### phpMyAdmin Access
+
+You can manage your MySQL database using phpMyAdmin at:
+- `http://localhost:8080` or
+- `http://127.0.0.1:8080`
+
+You can log in using either:
+
+- Root user:
+  - Username: `root`
+  - Password: Value of `DB_ROOT_PASSWORD` from your `.env` file
+
+- Regular user:
+  - Username: Value of `DB_USERNAME` from your `.env` file
+  - Password: Value of `DB_PASSWORD` from your `.env` file
 
 ## Development
 
